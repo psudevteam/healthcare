@@ -24,7 +24,7 @@ export const card = {
   },
   template: `
       <section
-        class="flex flex-col w-full shadow-md justify-between border-2 border-gray-200 rounded-xl h-full"
+        class="flex flex-col w-sm min-w-[80px] shadow-md justify-between border-2 border-gray-200 rounded-xl md:h-full h-full"
       >
         <div
           class="flex flex-col bg-white border-b-2 border-gray-200 items-center justify-center rounded-b-xl h-full"
@@ -32,24 +32,16 @@ export const card = {
           <img class="w-[300px]" :src="pic" alt="" />
         </div>
         <div class="flex flex-col p-4 gap-y-3 w-full">
-          <div class="flex flex w-full justify-between">
-            <h1 class="text-xl text-black-900 font-bold">{{title}}</h1>
-            <h1 class="text-xl text-black-900 font-bold">Rp.{{price}}</h1>
+          <div class="flex flex md:flex-row flex-col w-full justify-between">
+            <h1 class="lg:text-xl md:text-sm text-[14px] text-black-900 font-bold">{{title}}</h1>
+            <h1 class="ld:text-xl md:text-sm text-[14px] text-black-900 font-bold">Rp.{{price}}</h1>
           </div>
           <div class="flex flex-col">
-            <p class="text-sm text-black-700">
+            <p class="md:text-sm text-[12px] text-black-700">
             {{desc}}
             </p>
-            <span class="text-md text-black-700 font-bold mt-3">Stok {{stock}} </span>
+            <span class="md:text-md text-[14px] text-black-700 font-bold mt-3">Stok {{stock}} </span>
           </div>
-        </div>
-        <div class="flex justify-center items-end gap-x-4 p-4 h-full">
-          <button class="bg-gray-200 rounded-md w-auto h-auto p-2">
-            Beli Sekarang
-          </button>
-          <button class="bg-gray-200 rounded-md w-auto h-auto p-2">
-            + Keranjang
-          </button>
         </div>
       </section>
   `,
