@@ -5,7 +5,11 @@ const routes = [
   {
     path: "/",
     component: listProduct,
-  }, 
+  },
+  {
+    path: "/beast-vapeshop",
+    component: listProduct,
+  },
   {
     path: "/uts-crud",
     component: listProduct,
