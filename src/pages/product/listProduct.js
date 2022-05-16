@@ -1,4 +1,4 @@
-const { onMounted, ref } = Vue;
+const { onBeforeMount, ref } = Vue;
 import { card } from "../../components/card/card.js";
 import { Navbar } from "../../components/common/Navbar.js";
 import { useProductStore } from "../../store/product.js";
@@ -13,7 +13,7 @@ export const listProduct = {
 
     const productList = ref([]);
 
-    onMounted(async () => {
+    onBeforeMount( async () => {
       const res = await store.fetchAllProduct();
       productList.value = res.data;
     });
@@ -30,11 +30,11 @@ export const listProduct = {
     v-for="(n, i) in productList" :key="i"
     >
       <card
-        :title="n.product_name"
-        :price="n.product_price"
-        :desc="n.product_desc"
-        :pic="n.product_pic"
-        :stock="n.product_qty"
+        :title="n.name"
+        :price="n.price"
+        :desc="n.desc"
+        :pic="n.pic"
+        :stock="n.qty"
       />
     </div>
   </div>

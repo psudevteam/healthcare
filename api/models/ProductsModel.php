@@ -6,11 +6,11 @@
 
     // Product Properties
     public $id;
-    public $product_name;
-    public $product_desc;
-    public $product_price;
-    public $product_qty;
-    public $product_pic;
+    public $name;
+    public $price;
+    public $desc;
+    public $pic;
+    public $qty;
 
     // Constructor with DB
     public function __construct($db) {
@@ -19,6 +19,7 @@
 
     // Get Product
     public function read() {
+      
       // Create query
       $query = 'SELECt * FROM product';
 

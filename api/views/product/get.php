@@ -31,11 +31,11 @@
 
       $data_item = array(
         'id' => $id,
-        'product_name' => $product_name,
-        'product_desc' => $product_desc,
-        'product_price' => $product_price,
-        'product_qty' => $product_qty,
-        'product_pic' => $product_pic,
+        'name' => $name,
+        'price' => $price,
+        'desc' => $desc,
+        'pic' => $pic,
+        'qty' => $qty,
       );
 
       // Push to "data"

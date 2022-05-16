@@ -1,3 +1,3 @@
 export default axios.create({
-  baseURL: "/beast-vapeshop/api/views/",
+  baseURL: "/api/views/",
 });
