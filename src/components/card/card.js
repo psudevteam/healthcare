@@ -5,8 +5,8 @@ export const card = {
       default: "Produk",
     },
     price: {
-      type: Number,
-      default: 0,
+      type: String,
+      default: "0",
     },
     desc: {
       type: String,

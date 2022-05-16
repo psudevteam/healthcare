@@ -1,10 +1,11 @@
 <?php 
   class Database {
 
-    private $host = 'localhost';
-    private $db_name = 'beast_vape_shop';
+    private $host = 'healthcare-db';
+    private $db_name = 'healthcare';
     private $username = 'admin';
     private $password = 'admin';
+    private $port = 9906;
     private $conn;
 
     public function connect() {
