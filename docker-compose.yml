@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  healthcare:
+    container_name: healthcare
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: php:8.0-apache
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - 8000:80
+
+  healthcare-db:
+        container_name: healthcare-db
+        image: mysql
+        restart: always
+        volumes:
+          - healthcare-db:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
+            MYSQL_DATABASE: ${DB_NAME}
+            MYSQL_USER: ${DB_USER}
+            MYSQL_PASSWORD: ${DB_PASS}
+        ports:
+            - "9906:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+        - '8080:80'
+    restart: always
+    environment:
+        PMA_HOST: healthcare-db
+    depends_on:
+        - healthcare-db
+
+volumes: 
+  healthcare-db:
