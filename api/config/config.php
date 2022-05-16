@@ -3,8 +3,8 @@
 
     private $host = 'healthcare-db';
     private $db_name = 'healthcare';
-    private $username = 'admin';
-    private $password = 'admin';
+    private $username = 'root';
+    private $password = 'toor';
     private $port = 9906;
     private $conn;
 

@@ -17,6 +17,7 @@ services:
         restart: always
         volumes:
           - healthcare-db:/var/lib/mysql
+          - ./:/docker-entrypoint-initdb.d
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
             MYSQL_DATABASE: ${DB_NAME}
