@@ -30,9 +30,9 @@ export const listProduct = {
     v-for="(n, i) in productList" :key="i"
     >
       <card
+        :id="n.id"
         :title="n.name"
         :price="n.price"
-        :desc="n.desc"
         :pic="n.pic"
         :stock="n.qty"
       />
