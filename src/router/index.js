@@ -1,5 +1,7 @@
 const { createRouter, createWebHistory } = VueRouter;
 import { listProduct } from "../pages/product/listProduct.js";
+import { register } from "../pages/auth/register.js"
+import { login } from "../pages/auth/login.js"
 
 const routes = [
   {
@@ -13,6 +15,14 @@ const routes = [
   {
     path: "/uts-crud",
     component: listProduct,
+  },
+  {
+    path: "/register",
+    component: register,
+  },
+  {
+    path: "/login",
+    component: login,
   },
 ];
 
