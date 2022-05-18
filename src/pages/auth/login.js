@@ -8,7 +8,7 @@ export const login ={
     <div class="bg-gray-100 text-gray-500 w-full overflow-hidden h-screen">
         <div class="md:flex  w-full h-screen">
             <div class="hidden order-2 md:block w-1/2 bg-indigo-500 py-10 px-10">
-                Test Drive
+            <img src="assets/img/login.png" />
             </div>
             <div class="w-full md:w-1/2 py-10 px-5 md:px-10 mb-8">
                 <div class=" mb-10">

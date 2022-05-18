@@ -1,20 +1,13 @@
 const { createRouter, createWebHistory } = VueRouter;
-import { listProduct } from "../pages/product/listProduct.js";
+import { landing } from "../pages/landing/index.js";
 import { register } from "../pages/auth/register.js"
 import { login } from "../pages/auth/login.js"
+import { listProduct } from "../pages/product/listProduct.js"
 
 const routes = [
   {
     path: "/",
-    component: listProduct,
-  },
-  {
-    path: "/beast-vapeshop",
-    component: listProduct,
-  },
-  {
-    path: "/uts-crud",
-    component: listProduct,
+    component: landing,
   },
   {
     path: "/register",
@@ -24,6 +17,10 @@ const routes = [
     path: "/login",
     component: login,
   },
+  {
+    path: "/listProduct",
+    component: listProduct,
+  }
 ];
 
 export const router = createRouter({
