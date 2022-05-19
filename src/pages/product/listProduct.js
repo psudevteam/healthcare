@@ -25,7 +25,7 @@ export const listProduct = {
   template: `
   <Navbar/>
   <div
-  class="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-2 lg:px-16 md:px-8 sm:px-6 px-4 w-full md:gap-4 gap-2 px-auto md:py-16 py-8">
+  class="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2 lg:px-16 md:px-8 sm:px-6 px-4 w-full md:gap-4 gap-2 px-auto md:py-16 py-8">
     <div
     v-for="(n, i) in productList" :key="i"
     >
